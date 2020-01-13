@@ -12,7 +12,7 @@ from tempfile import TemporaryFile
 book = xlwt.Workbook()
 sheet1 = book.add_sheet('sheet1')
 
-image=cv2.imread('dataset\YM.SU2.59.TIFF')
+image=cv2.imread('dataset\KA.HA3.31.TIFF')
 #Set up some required objects
 video_capture = cv2.VideoCapture(0) #Webcam object
 detector = dlib.get_frontal_face_detector() #Face detector
