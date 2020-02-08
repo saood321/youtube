@@ -12,7 +12,7 @@ from tempfile import TemporaryFile
 book = xlwt.Workbook()
 sheet1 = book.add_sheet('sheet1')
 
-image=cv2.imread('dataset\KA.HA3.31.TIFF')
+image=cv2.imread('UY.HA3.139.TIFF')
 #Set up some required objects
 video_capture = cv2.VideoCapture(0) #Webcam object
 detector = dlib.get_frontal_face_detector() #Face detector
@@ -32,8 +32,7 @@ def get_landmarks(image):
         for x, y in zip(xlist, ylist): #Store all landmarks in one list in the format x1,y1,x2,y2,etc.
             landmarks.append(x)
             landmarks.append(y)
-        plt.scatter(xlist, ylist)
-        plt.show()
+
 
     if len(detections) > 0:
         return landmarks
