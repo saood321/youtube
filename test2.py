@@ -12,9 +12,8 @@ from tempfile import TemporaryFile
 book = xlwt.Workbook()
 sheet1 = book.add_sheet('sheet1')
 
-image=cv2.imread('UY.HA3.139.TIFF')
+image=cv2.imread('372372_faces.jpg')
 #Set up some required objects
-video_capture = cv2.VideoCapture(0) #Webcam object
 detector = dlib.get_frontal_face_detector() #Face detector
 predictor = dlib.shape_predictor("shape_predictor_68_face_landmarks.dat") #Landmark identifier. Set the filename to whatever you named the downloaded file
 
@@ -46,7 +45,6 @@ print(list)
 
 
 for i,e in enumerate(list):
-    sheet1.write(i,1,e)
+    sheet1.write(i,2,e)
 name = "random1.xls"
 book.save(name)
-book.save(TemporaryFile())
