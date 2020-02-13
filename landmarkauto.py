@@ -26,7 +26,7 @@ dest_sheet = dest_wb.get_sheet_by_name('Sheet1')
 j=1
 for filename in os.listdir(directory):
     if filename.endswith(".jpg") or filename.endswith(".py"):
-        images=os.path.join(directory, filename) 
+        images=os.path.join(directory, filename)
         image = cv2.imread(images)
         # Set up some required objects
         detector = dlib.get_frontal_face_detector()  # Face detector
